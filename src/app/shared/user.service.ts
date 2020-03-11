@@ -47,6 +47,11 @@ private readonly BaseURI = 'http://localhost:52291/api/account';
     return this.http.post(this.BaseURI + '/register', body)
 
   }
+
+  login(formData){
+    
+    return this.http.post(this.BaseURI + '/login', formData)
+  }
 }
 
  

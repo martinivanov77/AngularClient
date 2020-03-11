@@ -4,9 +4,8 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\shared",
-    "\\src\\app\\user",
     "\\src\\app\\user\\registration"
   ],
-  "SelectedNode": "\\src\\app\\shared\\user.service.ts",
+  "SelectedNode": "\\src\\app\\user",
   "PreviewInSolutionExplorer": false
 }

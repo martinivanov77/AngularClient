@@ -9,7 +9,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class RegistrationComponent implements OnInit {
 
-  constructor(public service:UserService) { }
+  constructor(public service:UserService , private toasrt:ToastrService) { }
 
   ngOnInit(): void  {
     this.service.formModel.reset();
@@ -20,18 +20,9 @@ export class RegistrationComponent implements OnInit {
       (response:any) => {
         if(response.username != null){
           this.service.formModel.reset();
-        }else{
-          response.errors.array.forEach(element => {
-            switch(element.code){
-              case 'DupluicateUserName':
-              break;
-
-              default:
-
-              break;
-            }
+          this.toasrt.success('User created!','Registration succesful.');
+        }
           });
         }
-      }
-    );
-}}
+      };
+    

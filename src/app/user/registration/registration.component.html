@@ -1,14 +1,5 @@
-<div class="row mt-4">
-    <div class="col md-6">
-        <div class="row" style="height: 450px;">
-      <div class="col-md-12 my-auto side-header">
-          <img src="assets\user-add-icon.png" class="mx-auto d-block"/>
-          <h1>Register</h1>
-          
-      </div>
-        </div>
-    </div>
-    <div class="col md-6">
+
+    
     <form [formGroup]="service.formModel" autocomplete="off" (submit)="onSubmit()">
        
         <div class="form-group required">
@@ -19,13 +10,13 @@
     <div formGroupName = "Passwords">
         <div class="form-group required">
             <label>Password</label>
-            <input class="form-control" formControlName="Password">
+            <input type="password" class="form-control" formControlName="Password">
             <label class="text-danger" *ngIf="service.formModel.get('Passwords.Password').touched && service.formModel.get('Passwords.Password').errors?.required">This field is required!</label>
             <label class="text-danger" *ngIf="service.formModel.get('Passwords.Password').touched && service.formModel.get('Passwords.Password').errors?.minlength">Password must be at least 4 characters long!</label>
         </div>
         <div class="form-group required">
             <label>Confirm Password</label>
-            <input class="form-control" formControlName="ConfirmPassword">
+            <input type="password"  class="form-control" formControlName="ConfirmPassword">
             <label class="text-danger" *ngIf="service.formModel.get('Passwords.ConfirmPassword').touched && service.formModel.get('Passwords.ConfirmPassword').errors?.required">This field is required!</label>
             <label class="text-danger" *ngIf="service.formModel.get('Passwords.ConfirmPassword').touched && service.formModel.get('Passwords.ConfirmPassword').errors?.passwordMismatch">Passwords do not match!</label>
 
@@ -37,5 +28,4 @@
          </div>
      </div>
     </form>
-    </div>
-</div>
+   
